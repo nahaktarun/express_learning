@@ -1,20 +1,32 @@
-var express = require("express");
+// var express = require("express");
 
-var app = express();
+// var app = express();
 
-app.set("view engine", "pug");
+// app.set("view engine", "pug");
 
-app.set("views", "./views");
+// app.set("views", "./views");
 
-app.get("/hello", (req, res) => {
-  res.render("first_view");
-});
+// app.get("/hello", (req, res) => {
+//   res.render("first_view");
+// });
 
-app.get("/dynamic_view", (req, res) => {
-  res.render("dynamic", {
-    name: "Alex",
-    url: "https://www.google.com",
-  });
-});
+// app.get("/dynamic_view", (req, res) => {
+//   res.render("dynamic", {
+//     name: "Alex",
+//     url: "https://www.google.com",
+//   });
+// });
 
-app.listen(3000);
+// app.listen(3000);
+
+function name(value) {
+  // base case
+  if (value === 0) {
+    return 0;
+  }
+  // recursive
+  console.log(value);
+  name(value - 1);
+}
+
+name(10);
