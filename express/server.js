@@ -60,9 +60,7 @@ app.post("/person", (req, res) => {
     newPerson
       .save()
       .then(() =>
-        res.render("show_message", {
-          message: "New person added",
-          type: "success",
+        res.send({
           person: personInfo,
         })
       )
