@@ -29,6 +29,14 @@
 //   console.log(index, value, array);
 // });
 
-console.log(process.memoryUsage());
+// console.log(process.memoryUsage());
 
-console.log(process.version);
+// console.log(process.version);
+// console.log(process.argv);
+const values = process.argv;
+
+if (values[2] == "argument1") {
+  console.log("This is a argument that you've inserted");
+}
+
+const http = require("http");
