@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon templating.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive --exit"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.20"
   }
 }

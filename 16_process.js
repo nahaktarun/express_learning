@@ -39,11 +39,31 @@
 
 // 3. exec() => (command, option[], callback)
 
-const { exec } = require("child_process");
+// const { exec } = require("child_process");
 
-exec("ls |  find ./express", (err, stdout, stderr) => {
-  if (err) {
-    console.log("Error occured", err);
+// exec("ls |  find ./express", (err, stdout, stderr) => {
+//   if (err) {
+//     console.log("Error occured", err);
+//   }
+//   console.log(`stdout: no of files = ${stdout}`);
+// });
+
+// 4. execFile() -> (file ,args[], option[], callback)
+// a. more efficient then exec()
+// you can return the instance of child process as well.
+
+const { execFile } = require("child_process");
+
+// const child = execFile("node", ["simple.js"], (error, stdout, stderr) => {
+//   if (error) {
+//     console.log(error);
+//   }
+//   console.log(stdout);
+// });
+
+const child = execFile("ksh", ["bash.sh"], (error, stdout, stderr) => {
+  if (error) {
+    console.log(error);
   }
-  console.log(`stdout: no of files = ${stdout}`);
+  console.log(stdout);
 });
